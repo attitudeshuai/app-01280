@@ -10,6 +10,21 @@ import {
   ClockCircleOutlined
 } from '@ant-design/icons-vue'
 import dayjs from 'dayjs'
+import 'dayjs/locale/zh-cn'
+
+// 设置 dayjs 使用中文
+dayjs.locale('zh-cn')
+
+// 星期中文映射
+const weekDayMap: Record<number, string> = {
+  0: '周日',
+  1: '周一',
+  2: '周二',
+  3: '周三',
+  4: '周四',
+  5: '周五',
+  6: '周六'
+}
 
 const router = useRouter()
 const route = useRoute()
@@ -26,7 +41,7 @@ const dateList = Array.from({ length: 7 }, (_, i) => {
   return {
     value: date.format('YYYY-MM-DD'),
     label: i === 0 ? '今天' : i === 1 ? '明天' : date.format('MM-DD'),
-    week: date.format('ddd')
+    week: weekDayMap[date.day()]
   }
 })
 

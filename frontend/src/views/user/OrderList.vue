@@ -106,7 +106,7 @@ onMounted(() => {
           <!-- 订单内容 -->
           <div class="order-content">
             <div class="poster" v-if="order.showtime?.movie?.poster">
-              <img :src="order.showtime.movie.poster" :alt="order.showtime.movie.title" />
+              <img :src="order.showtime.movie.poster" :alt="order.showtime.movie.title" referrerPolicy="no-referrer" @error="(e: Event) => (e.target as HTMLImageElement).src = '/images/poster-placeholder.svg'" />
             </div>
             <div class="info">
               <h3>{{ order.showtime?.movie?.title }}</h3>

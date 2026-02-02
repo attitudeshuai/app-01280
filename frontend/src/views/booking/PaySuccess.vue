@@ -8,8 +8,7 @@ import QrcodeVue from 'qrcode.vue'
 import {
   CheckCircleFilled,
   EnvironmentOutlined,
-  ClockCircleOutlined,
-  CopyOutlined
+  ClockCircleOutlined
 } from '@ant-design/icons-vue'
 
 const router = useRouter()
@@ -56,13 +55,6 @@ const fetchOrder = async () => {
   }
 }
 
-// 复制取票码
-const copyTicketCode = () => {
-  if (!order.value?.ticketCode) return
-  navigator.clipboard.writeText(order.value.ticketCode)
-  message.success('取票码已复制')
-}
-
 onMounted(() => {
   fetchOrder()
 })
@@ -88,9 +80,6 @@ onMounted(() => {
             <span class="label">取票码</span>
             <div class="code-value">
               <span>{{ order.ticketCode }}</span>
-              <a-button type="link" size="small" @click="copyTicketCode">
-                <CopyOutlined /> 复制
-              </a-button>
             </div>
           </div>
         </div>

@@ -74,7 +74,7 @@ onMounted(() => {
           @click="goDetail(movie.id)"
         >
           <div class="poster">
-            <img :src="movie.poster" :alt="movie.title" />
+            <img :src="movie.poster" :alt="movie.title" referrerPolicy="no-referrer" @error="(e: Event) => (e.target as HTMLImageElement).src = '/images/poster-placeholder.svg'" />
             <div class="rating" v-if="movie.rating">
               <StarFilled /> {{ movie.rating }}
             </div>

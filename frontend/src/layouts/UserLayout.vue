@@ -122,12 +122,12 @@ const goLogin = () => {
     <!-- 页脚 -->
     <a-layout-footer class="footer">
       <div class="footer-content">
-        <p>© 2026 电影票预订系统. All rights reserved.</p>
+        <p>© 2026 星影票务. All rights reserved.</p>
         <div class="footer-links">
-          <a href="#">关于我们</a>
-          <a href="#">联系方式</a>
-          <a href="#">用户协议</a>
-          <a href="#">隐私政策</a>
+          <router-link to="/about">关于我们</router-link>
+          <router-link to="/contact">联系方式</router-link>
+          <router-link to="/terms">用户协议</router-link>
+          <router-link to="/privacy">隐私政策</router-link>
         </div>
       </div>
     </a-layout-footer>

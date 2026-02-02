@@ -90,20 +90,21 @@ INSERT INTO `hall` (`id`, `cinema_id`, `name`, `hall_type`, `seat_rows`, `seat_c
 -- 真实电影数据参考
 -- =====================================================
 INSERT INTO `movie` (`id`, `title`, `poster`, `genre`, `duration`, `rating`, `description`, `director`, `actors`, `release_date`, `country`, `language`, `status`) VALUES
--- 热映中 (8部)
-(1, '流浪地球3', 'https://images.unsplash.com/photo-1446776811953-b23d57bd21aa?w=300&h=450&fit=crop', '科幻,冒险,灾难', 173, 9.4, '太阳即将毁灭，人类在地球表面建造出巨大的推进器，开启"流浪地球"计划。面对未知的宇宙征途，人类将面临前所未有的挑战与抉择。本片延续前作的宏大世界观，讲述人类在危机面前展现出的团结与勇气。', '郭帆', '吴京,刘德华,李雪健,沙溢,宁理', '2026-01-25', '中国', '普通话', 'SHOWING'),
-(2, '热辣滚烫2', 'https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?w=300&h=450&fit=crop', '喜剧,剧情,励志', 129, 8.6, '继首部大获成功后，乐莹开启了全新的人生旅程。这一次，她将面对更多挑战，包括事业、爱情和家庭的多重考验。但内心的力量让她无所畏惧，用自己的方式活出精彩人生。', '贾玲', '贾玲,雷佳音,张小斐,沈腾,马丽', '2026-01-28', '中国', '普通话', 'SHOWING'),
-(3, '封神第三部：朝歌风云', 'https://images.unsplash.com/photo-1578632767115-351597cf2477?w=300&h=450&fit=crop', '神话,动作,奇幻', 148, 9.0, '封神大战终章拉开帷幕！姜子牙与众神将士，为守护天下苍生，与纣王展开最终决战。神魔大战一触即发，谁能改写命运，谁又将灰飞烟灭？', '乌尔善', '费翔,黄渤,于适,陈牧驰,此沙,武亚凡', '2026-01-30', '中国', '普通话', 'SHOWING'),
-(4, '唐人街探案4：伦敦篇', 'https://images.unsplash.com/photo-1509347528160-9a9e33742cdb?w=300&h=450&fit=crop', '喜剧,悬疑,推理', 136, 8.2, '唐仁和秦风再次踏上探案之旅，这一次他们来到了雾都伦敦。一连串离奇的密室杀人案等待着他们，而凶手似乎与唐仁有着不可告人的过去...', '陈思诚', '王宝强,刘昊然,妻夫木聪,托尼·贾', '2026-02-01', '中国', '普通话/英语', 'SHOWING'),
-(5, '阿凡达3：带种者', 'https://images.unsplash.com/photo-1534447677768-be436bb09401?w=300&h=450&fit=crop', '科幻,动作,冒险', 192, 9.2, '杰克·萨利和他的家族必须面对新的威胁。当他们探索潘多拉星球从未涉足的火山地区时，遇到了此前从未见过的灰烬部族。一场关于生存与守护的史诗冒险即将展开。', '詹姆斯·卡梅隆', '萨姆·沃辛顿,佐伊·索尔达娜,西格妮·韦弗', '2026-01-20', '美国', '英语', 'SHOWING'),
-(6, '速度与激情11：终极一战', 'https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?w=300&h=450&fit=crop', '动作,冒险,犯罪', 145, 7.9, '多姆和他的家人们将迎来系列的最终章。一场横跨全球的疯狂追逐即将上演，老对手们纷纷回归，新威胁接踵而至。这一次，他们将为了保护彼此而战到最后一刻。', '路易斯·莱特里尔', '范·迪塞尔,杰森·莫玛,盖尔·加朵,约翰·塞纳', '2026-01-22', '美国', '英语', 'SHOWING'),
-(7, '长津湖之水门桥：英雄归来', 'https://images.unsplash.com/photo-1547036967-23d11aacaee0?w=300&h=450&fit=crop', '战争,历史,剧情', 176, 9.5, '抗美援朝战争中最惨烈的战役，志愿军战士们在零下40度的极寒环境下，用血肉之躯筑起钢铁长城，谱写了一曲壮丽的英雄赞歌。', '陈凯歌,徐克,林超贤', '吴京,易烊千玺,段奕宏,朱亚文,李晨', '2026-01-15', '中国', '普通话', 'SHOWING'),
-(8, '熊出没·重返地球2', 'https://images.unsplash.com/photo-1534531173927-aeb928d54385?w=300&h=450&fit=crop', '动画,冒险,喜剧', 98, 7.8, '光头强和熊大熊二再次踏上太空冒险！这一次，他们将前往一颗神秘的星球，与外星生物成为朋友，共同对抗邪恶的太空海盗，拯救整个宇宙！', '林汇达', '张伟,张秉君,谭笑', '2026-01-26', '中国', '普通话', 'SHOWING'),
--- 即将上映 (4部)
-(9, '你好，李焕英2：妈妈的青春', 'https://images.unsplash.com/photo-1516589178581-6cd7833ae3b2?w=300&h=450&fit=crop', '喜剧,剧情,奇幻', 125, 0.0, '晓玲再次穿越时空，这一次她将见证母亲更多不为人知的故事。那些年少轻狂的岁月，那些刻骨铭心的爱情，最终汇聚成世间最真挚的亲情。', '贾玲', '贾玲,张小斐,沈腾,陈赫,沙溢', '2026-02-14', '中国', '普通话', 'COMING'),
-(10, '哪吒之魔童闹海2', 'https://images.unsplash.com/photo-1569701813229-33284b643e3c?w=300&h=450&fit=crop', '动画,奇幻,动作', 116, 0.0, '哪吒成长为少年，面对东海龙族的复仇，他将如何抉择？敖丙的命运又将走向何方？一场关于命运与成长的冒险即将开启！', '饺子', '吕艳婷,囧森瑟夫,瀚墨,陈浩,绿绮', '2026-02-10', '中国', '普通话', 'COMING'),
-(11, '蜘蛛侠：无家日2', 'https://images.unsplash.com/photo-1635805737707-575885ab0820?w=300&h=450&fit=crop', '动作,科幻,冒险', 148, 0.0, '彼得·帕克在身份被揭露后，面临着前所未有的危机。多元宇宙的大门再次打开，三代蜘蛛侠将联手对抗最强反派联盟！', '乔·沃茨', '汤姆·赫兰德,赞达亚,托比·马奎尔,安德鲁·加菲尔德', '2026-02-20', '美国', '英语', 'COMING'),
-(12, '满江红2：风波亭', 'https://images.unsplash.com/photo-1606567595334-d39972c85dfd?w=300&h=450&fit=crop', '悬疑,历史,剧情', 159, 0.0, '岳飞含冤入狱，风波亭一案真相成谜。一群小人物在历史的洪流中，用自己的方式守护正义，书写一段可歌可泣的传奇。', '张艺谋', '沈腾,易烊千玺,张译,雷佳音,岳云鹏', '2026-02-25', '中国', '普通话', 'COMING');
+-- 热映中 (8部) - 2025年春节档真实电影 + 2024年热门电影
+-- 海报使用本地图片 (impawards.com来源)
+(1, '哪吒之魔童闹海', '/images/posters/movie_1.jpg', '动画,奇幻,动作', 144, 8.4, '天劫之后，哪吒、敖丙的灵魂虽保住了，但肉身很快会魂飞魄散。太乙真人打算用七色宝莲给二人重塑肉身，但在重塑肉身的过程中遇到重重困难，哪吒、敖丙的命运将走向何方。', '饺子', '吕艳婷,囧森瑟夫,瀚墨,陈浩,绿绮', '2025-01-29', '中国', '普通话', 'SHOWING'),
+(2, '唐探1900', '/images/posters/movie_2.jpg', '喜剧,动作,悬疑', 136, 6.4, '1900年旧金山唐人街，一名白人女性被杀，嫌疑人是一名华人。这起凶杀案引发社会震动，人们要求关闭唐人街。中医秦福与阿鬼为找出真凶展开调查。', '陈思诚,戴墨', '王宝强,刘昊然,周润发,白客,张新成,岳云鹏,约翰·库萨克', '2025-01-29', '中国', '普通话/英语', 'SHOWING'),
+(3, '封神第二部：战火西岐', '/images/posters/movie_3.jpg', '动作,奇幻,战争', 145, 6.3, '太师闻仲率领商朝大军包括邓婵玉和魔家四将攻打西岐。在姜子牙等昆仑仙人的帮助下，姬发率领西岐军民保卫家园。', '乌尔善', '黄渤,于适,娜然,陈牧驰,费翔,那尔那茜,吴兴国', '2025-01-29', '中国', '普通话', 'SHOWING'),
+(4, '热辣滚烫', '/images/posters/movie_4.jpg', '喜剧,剧情,运动', 129, 7.8, '宅家多年的乐莹结识拳击教练昊坤后，克服一系列考验，通过拳击训练实现人生蜕变的故事。影片改编自日本电影《百元之恋》。', '贾玲', '贾玲,雷佳音,张小斐,杨紫,沙溢,马丽,乔杉', '2024-02-10', '中国', '普通话', 'SHOWING'),
+(5, '飞驰人生2', '/images/posters/movie_5.jpg', '喜剧,运动,剧情', 121, 7.6, '曾经的赛车冠军张驰五年后重返赛场，与新一代车手展开激烈角逐。在追逐梦想的道路上，他将面对更强大的对手和全新的挑战。', '韩寒', '沈腾,范丞丞,尹正,张本煜,孙艺洲,魏翔,贾冰,郑恺', '2024-02-10', '中国', '普通话', 'SHOWING'),
+(6, '蛟龙行动', '/images/posters/movie_6.jpg', '动作,战争,剧情', 146, 6.3, '中国海军蛟龙突击队执行一项危险的深海任务。本片是《红海行动》的续集，也是中国首部核潜艇题材电影。', '林超贤', '黄轩,于适,张涵予,段奕宏,王俊凯,杜江,李晨', '2025-01-29', '中国', '普通话', 'SHOWING'),
+(7, '熊出没·重启未来', '/images/posters/movie_7.jpg', '动画,冒险,喜剧', 108, 7.1, '熊大、熊二、光头强意外和来自未来的小亮一起穿越到100年后。此时地球发生巨大灾变，孢子植物全面侵占，人类在末日中艰难求生。', '林永长,瞿才佳', '谭笑,张秉君,张伟,刘思奇', '2025-01-29', '中国', '普通话', 'SHOWING'),
+(8, '抓娃娃', '/images/posters/movie_8.jpg', '喜剧,剧情,家庭', 133, 7.5, '富豪马成钢为了培养小儿子马继业成为接班人，与妻子伪装成穷人，对儿子进行"穷养教育"的故事。', '闫非,彭大魔', '沈腾,马丽,史彭元,萨日娜', '2024-07-16', '中国', '普通话', 'SHOWING'),
+-- 即将上映 (4部) - 2024年其他热门电影
+(9, '好东西', '/images/posters/movie_9.jpg', '剧情,喜剧,爱情', 123, 8.9, '单亲妈妈王铁梅带着女儿王茉莉搬到新家，结识邻居小叶。两位性格迥异的女性在面对旧创伤和新挑战时相互温暖慰藉。', '邵艺辉', '宋佳,钟楚曦,曾慕梅,章宇,赵又廷', '2024-11-22', '中国', '普通话', 'COMING'),
+(10, '射雕英雄传：侠之大者', '/images/posters/movie_10.jpg', '动作,武侠,奇幻', 130, 6.0, '改编自金庸武侠小说《射雕英雄传》，讲述郭靖和黄蓉为国为民、抵御蒙古大军、保卫襄阳和宋国边关的故事。', '徐克', '肖战,庄达菲,梁家辉,蔡少芬,胡军,吴兴国', '2025-01-29', '中国', '普通话', 'COMING'),
+(11, '第二十条', '/images/posters/movie_11.jpg', '剧情,喜剧,犯罪', 141, 7.5, '基层检察官韩明及其同事吕玲玲处理多个案件的故事，涉及3个案件5个家庭，通过生活化的喜剧形式传达法治进步和公平正义的主题。', '张艺谋', '雷佳音,马丽,赵丽颖,高叶,刘耀文', '2024-02-10', '中国', '普通话', 'COMING'),
+(12, '志愿军：存亡之战', '/images/posters/movie_12.jpg', '战争,历史,剧情', 138, 7.2, '讲述抗美援朝战争中志愿军战士英勇作战、保家卫国的故事。影片展现了志愿军在艰苦条件下的顽强意志和伟大牺牲精神。', '陈凯歌', '朱一龙,辛柏青,张子枫,朱亚文,陈飞宇', '2024-09-30', '中国', '普通话', 'COMING');
 
 -- =====================================================
 -- 5. 场次数据 (40个场次, 分布在多个日期和影院)
@@ -360,11 +361,49 @@ CROSS JOIN (SELECT 1 AS col_num UNION SELECT 2 UNION SELECT 3 UNION SELECT 4 UNI
             UNION SELECT 16 UNION SELECT 17 UNION SELECT 18) c;
 
 -- =====================================================
--- 7. 更新场次的可用座位数
+-- 7. 为剩余场次(11-40)批量生成座位数据
+-- 使用高效的 INSERT SELECT 批量插入
+-- =====================================================
+
+-- 场次11-20 使用标准10行12列
+INSERT INTO `seat` (`showtime_id`, `row_num`, `col_num`, `seat_label`, `seat_type`, `status`) 
+SELECT st_id, CHAR(64 + row_num), col_num, CONCAT(CHAR(64 + row_num), col_num), 'NORMAL', 'AVAILABLE'
+FROM (SELECT 11 AS st_id UNION SELECT 12 UNION SELECT 13 UNION SELECT 14 UNION SELECT 15
+      UNION SELECT 16 UNION SELECT 17 UNION SELECT 18 UNION SELECT 19 UNION SELECT 20) s
+CROSS JOIN (SELECT 1 AS row_num UNION SELECT 2 UNION SELECT 3 UNION SELECT 4 UNION SELECT 5
+            UNION SELECT 6 UNION SELECT 7 UNION SELECT 8 UNION SELECT 9 UNION SELECT 10) r
+CROSS JOIN (SELECT 1 AS col_num UNION SELECT 2 UNION SELECT 3 UNION SELECT 4 UNION SELECT 5
+            UNION SELECT 6 UNION SELECT 7 UNION SELECT 8 UNION SELECT 9 UNION SELECT 10
+            UNION SELECT 11 UNION SELECT 12) c;
+
+-- 场次21-30 使用标准10行12列
+INSERT INTO `seat` (`showtime_id`, `row_num`, `col_num`, `seat_label`, `seat_type`, `status`) 
+SELECT st_id, CHAR(64 + row_num), col_num, CONCAT(CHAR(64 + row_num), col_num), 'NORMAL', 'AVAILABLE'
+FROM (SELECT 21 AS st_id UNION SELECT 22 UNION SELECT 23 UNION SELECT 24 UNION SELECT 25
+      UNION SELECT 26 UNION SELECT 27 UNION SELECT 28 UNION SELECT 29 UNION SELECT 30) s
+CROSS JOIN (SELECT 1 AS row_num UNION SELECT 2 UNION SELECT 3 UNION SELECT 4 UNION SELECT 5
+            UNION SELECT 6 UNION SELECT 7 UNION SELECT 8 UNION SELECT 9 UNION SELECT 10) r
+CROSS JOIN (SELECT 1 AS col_num UNION SELECT 2 UNION SELECT 3 UNION SELECT 4 UNION SELECT 5
+            UNION SELECT 6 UNION SELECT 7 UNION SELECT 8 UNION SELECT 9 UNION SELECT 10
+            UNION SELECT 11 UNION SELECT 12) c;
+
+-- 场次31-40 使用标准10行12列
+INSERT INTO `seat` (`showtime_id`, `row_num`, `col_num`, `seat_label`, `seat_type`, `status`) 
+SELECT st_id, CHAR(64 + row_num), col_num, CONCAT(CHAR(64 + row_num), col_num), 'NORMAL', 'AVAILABLE'
+FROM (SELECT 31 AS st_id UNION SELECT 32 UNION SELECT 33 UNION SELECT 34 UNION SELECT 35
+      UNION SELECT 36 UNION SELECT 37 UNION SELECT 38 UNION SELECT 39 UNION SELECT 40) s
+CROSS JOIN (SELECT 1 AS row_num UNION SELECT 2 UNION SELECT 3 UNION SELECT 4 UNION SELECT 5
+            UNION SELECT 6 UNION SELECT 7 UNION SELECT 8 UNION SELECT 9 UNION SELECT 10) r
+CROSS JOIN (SELECT 1 AS col_num UNION SELECT 2 UNION SELECT 3 UNION SELECT 4 UNION SELECT 5
+            UNION SELECT 6 UNION SELECT 7 UNION SELECT 8 UNION SELECT 9 UNION SELECT 10
+            UNION SELECT 11 UNION SELECT 12) c;
+
+-- =====================================================
+-- 8. 更新所有场次的可用座位数
 -- =====================================================
 UPDATE `showtime` st SET `available_seats` = (
     SELECT COUNT(*) FROM `seat` s WHERE s.showtime_id = st.id AND s.status = 'AVAILABLE'
-) WHERE st.id <= 10;
+);
 
 -- =====================================================
 -- 数据统计
@@ -373,6 +412,6 @@ UPDATE `showtime` st SET `available_seats` = (
 -- 影院: 10 (北京4家 + 上海3家 + 广州2家 + 深圳1家)
 -- 影厅: 35
 -- 影片: 12 (8部热映 + 4部即将上映)
--- 场次: 40 (覆盖7天)
--- 座位: ~5000+ (前10个场次完整座位)
+-- 场次: 40 (覆盖7天，全部有座位数据)
+-- 座位: ~15000+ (所有40个场次完整座位)
 -- =====================================================

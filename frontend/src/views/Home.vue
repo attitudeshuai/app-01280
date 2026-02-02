@@ -91,7 +91,7 @@ const goCinemaDetail = (id: number) => {
             @click="goMovieDetail(movie.id)"
           >
             <div class="movie-poster">
-              <img :src="movie.poster" :alt="movie.title" />
+              <img :src="movie.poster" :alt="movie.title" referrerPolicy="no-referrer" @error="(e: Event) => (e.target as HTMLImageElement).src = '/images/poster-placeholder.svg'" />
               <div class="movie-rating" v-if="movie.rating">
                 <StarFilled /> {{ movie.rating }}
               </div>
@@ -164,6 +164,7 @@ const goCinemaDetail = (id: number) => {
 .banner-bg {
   position: absolute;
   inset: 0;
+  background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
   background-size: cover;
   background-position: center;
   filter: blur(20px) brightness(0.4);

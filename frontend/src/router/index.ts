@@ -83,6 +83,31 @@ const routes: RouteRecordRaw[] = [
     component: () => import('@/views/auth/Register.vue'),
     meta: { title: '注册' }
   },
+  // ===== 静态页面 =====
+  {
+    path: '/about',
+    name: 'About',
+    component: () => import('@/views/static/About.vue'),
+    meta: { title: '关于我们' }
+  },
+  {
+    path: '/contact',
+    name: 'Contact',
+    component: () => import('@/views/static/Contact.vue'),
+    meta: { title: '联系方式' }
+  },
+  {
+    path: '/terms',
+    name: 'Terms',
+    component: () => import('@/views/static/Terms.vue'),
+    meta: { title: '用户协议' }
+  },
+  {
+    path: '/privacy',
+    name: 'Privacy',
+    component: () => import('@/views/static/Privacy.vue'),
+    meta: { title: '隐私政策' }
+  },
   // ===== 管理后台路由 =====
   {
     path: '/admin',
