@@ -9,7 +9,7 @@ import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
 
 /**
- * 数据初始化器 - 确保测试用户密码正确
+ * 数据初始化器 - 确保演示账号密码正确
  */
 @Slf4j
 @Component
@@ -18,25 +18,22 @@ public class DataInitializer implements CommandLineRunner {
 
     private final UserMapper userMapper;
     
-    // 测试密码 (明文)
-    private static final String TEST_PASSWORD = "123456";
+    // 默认密码
+    private static final String DEFAULT_PASSWORD = "123456";
 
     @Override
     public void run(String... args) {
-        log.info("========== 初始化测试数据 ==========");
+        log.info("========== 初始化演示数据 ==========");
         
         // 生成正确的 BCrypt 密码
-        String hashedPassword = BCrypt.hashpw(TEST_PASSWORD);
-        log.info("BCrypt hash 生成成功");
+        String hashedPassword = BCrypt.hashpw(DEFAULT_PASSWORD);
         
-        // 更新测试用户密码
+        // 更新用户密码
         updateUserPassword("13800138000", hashedPassword);
         updateUserPassword("13900139000", hashedPassword);
         updateUserPassword("admin", hashedPassword);
         
-        log.info("========== 测试数据初始化完成 ==========");
-        log.info("测试账号: 13800138000 / 123456 (普通用户)");
-        log.info("测试账号: admin / 123456 (管理员)");
+        log.info("========== 数据初始化完成 ==========");
     }
     
     private void updateUserPassword(String phone, String hashedPassword) {

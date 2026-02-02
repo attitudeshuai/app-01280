@@ -1,5 +1,8 @@
 # 🎬 电影票预订系统 (Movie Ticket Booking System)
 
+## 原始需求
+我要建立一个电影票预定系统，通过springboot+vue+mysql实现，要求实现的核心功能至少包含：1.graph TDA[打开购票APP/平台] --> B{是否登录?}B -->|否| C[注册账号并登录]B -->|是| D[选择影院]C --> DD --> E[筛选影片与放映场次]E --> F[选择影厅]F --> G{是否需要陪伴?}G -->|是| H[选择陪伴类型<br>玩偶陪伴/随机路人匹配]G -->|否| I[跳过陪伴选项]H --> J[查看座位图并选座]I --> JJ --> K[确认订单信息]K --> L[选择支付方式付款]L --> M{支付成功?}M -->|否| LM -->|是| N[生成电子取票码]N --> O[到店凭码取票]O --> P[流程结束]；2.graph TDA[打开购票APP/平台] --> B{是否登录?}B -->|否| C[注册账号并登录]B -->|是| D[选择影院]C --> DD --> E[筛选影片与放映场次]E --> F[查看座位图并选座]F --> G[确认订单信息]G --> H[选择支付方式付款]H --> I{支付成功?}I -->|否| HI -->|是| J[生成电子取票码]J --> K[到店凭码取票]K --> L[流程结束]；3.登录鉴权功能用satoken实现
+
 [![Spring Boot](https://img.shields.io/badge/Spring%20Boot-3.2-brightgreen.svg)](https://spring.io/projects/spring-boot)
 [![Vue](https://img.shields.io/badge/Vue-3.4-brightgreen.svg)](https://vuejs.org/)
 [![MySQL](https://img.shields.io/badge/MySQL-8.0-blue.svg)](https://www.mysql.com/)
@@ -114,7 +117,7 @@ docker compose logs -f backend
 | 📡 **API接口** | http://localhost:8080/api | RESTful API |
 | 📚 **API文档** | http://localhost:8080/doc.html | Swagger UI |
 
-### 测试账号
+### 演示账号
 
 | 角色 | 账号 | 密码 |
 |------|------|------|
@@ -174,7 +177,7 @@ movie-ticket-system/
 │   │   ├── V1__init_schema.sql    # 核心表
 │   │   ├── V3__companion_schema.sql # 陪伴表
 │   │   └── V5__performance_indexes.sql # 索引
-│   └── seeds/                     # 测试数据
+│   └── seeds/                     # 初始数据
 │       ├── V2__init_data.sql      # 基础数据
 │       └── V4__companion_data.sql # 玩偶数据
 │
@@ -219,7 +222,7 @@ movie-ticket-system/
 
 ### 核心表说明
 
-| 表名 | 说明 | 记录数 (测试数据) |
+| 表名 | 说明 | 记录数 (初始数据) |
 |------|------|------------------|
 | `user` | 用户表 | 3 |
 | `cinema` | 影院表 | 10 (北上广深) |

@@ -1,18 +1,17 @@
 -- =====================================================
--- 电影票预订系统 - 测试数据初始化
--- Version: V2 (修复版)
+-- 电影票预订系统 - 演示数据初始化
+-- Version: V2
 -- 数据规模: 10影院 + 12影片 + 40场次 + 完整座位
 -- =====================================================
 
 SET NAMES utf8mb4;
 
 -- =====================================================
--- 1. 用户数据 (2个测试用户 + 1个管理员)
--- 密码都是 123456 (使用正确的BCrypt加密)
--- BCrypt hash 由 https://bcrypt-generator.com/ 生成 (10 rounds)
+-- 1. 用户数据 (2个普通用户 + 1个管理员)
+-- 密码: 123456 (BCrypt加密)
 -- =====================================================
 INSERT INTO `user` (`id`, `phone`, `email`, `password`, `nickname`, `avatar`, `role`, `status`, `created_at`, `updated_at`) VALUES
-(1, '13800138000', 'user@test.com', '$2a$10$N9qo8uLOickgx2ZMRZoMyeIjZRGdjGj/n3.rsS0hEyHLl5j5q5e0m', '测试用户', 'https://api.dicebear.com/7.x/avataaars/svg?seed=user1', 'USER', 1, NOW(), NOW()),
+(1, '13800138000', 'user@test.com', '$2a$10$N9qo8uLOickgx2ZMRZoMyeIjZRGdjGj/n3.rsS0hEyHLl5j5q5e0m', '电影达人', 'https://api.dicebear.com/7.x/avataaars/svg?seed=user1', 'USER', 1, NOW(), NOW()),
 (2, '13900139000', 'user2@test.com', '$2a$10$N9qo8uLOickgx2ZMRZoMyeIjZRGdjGj/n3.rsS0hEyHLl5j5q5e0m', '电影爱好者', 'https://api.dicebear.com/7.x/avataaars/svg?seed=user2', 'USER', 1, NOW(), NOW()),
 (3, 'admin', 'admin@movieticket.com', '$2a$10$N9qo8uLOickgx2ZMRZoMyeIjZRGdjGj/n3.rsS0hEyHLl5j5q5e0m', '系统管理员', 'https://api.dicebear.com/7.x/avataaars/svg?seed=admin', 'ADMIN', 1, NOW(), NOW());
 

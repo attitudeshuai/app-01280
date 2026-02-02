@@ -178,7 +178,7 @@ onUnmounted(() => {
         <div class="pay-method">
           <h3>选择支付方式</h3>
           <a-radio-group v-model:value="payType" size="large">
-            <a-radio-button value="MOCK">模拟支付 (测试)</a-radio-button>
+            <a-radio-button value="MOCK">快捷支付</a-radio-button>
             <a-radio-button value="ALIPAY" disabled>支付宝</a-radio-button>
             <a-radio-button value="WECHAT" disabled>微信支付</a-radio-button>
           </a-radio-group>

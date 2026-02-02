@@ -101,12 +101,6 @@ const goRegister = () => {
         <span>还没有账号？</span>
         <a @click="goRegister">立即注册</a>
       </div>
-
-      <div class="test-account">
-        <a-divider>测试账号</a-divider>
-        <p>普通用户: 13800138000 / 123456</p>
-        <p>管理员: admin / 123456</p>
-      </div>
     </div>
   </div>
 </template>
@@ -156,16 +150,5 @@ const goRegister = () => {
 .login-footer a {
   color: var(--color-primary);
   cursor: pointer;
-}
-
-.test-account {
-  margin-top: 24px;
-  text-align: center;
-  color: #999;
-  font-size: 12px;
-}
-
-.test-account p {
-  margin: 4px 0;
 }
 </style>

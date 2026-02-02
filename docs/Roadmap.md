@@ -38,7 +38,7 @@
 - [x] **TASK-1.1.3**: 数据库设计与初始化 ✅
   - ER 图设计 (docs/ER-Diagram.md)
   - DDL 脚本 (7个核心表)
-  - 测试数据 SQL (5影院+10影片+20场次+3000座位)
+  - 初始数据 SQL (10影院+12影片+40场次+5000座位)
   - MySQL 容器初始化自动执行
 
 - [x] **TASK-1.1.4**: 后端基础架构 ✅
@@ -319,7 +319,7 @@ docker compose up -d
 - ✅ 项目目录结构创建
 - ✅ Docker Compose 完整配置 (5服务+健康检查)
 - ✅ README 文档生成
-- ✅ 数据库设计 (10表+ER图+测试数据)
+- ✅ 数据库设计 (10表+ER图+初始数据)
 - ✅ 后端基础架构 (Spring Boot + SaToken + MyBatis-Plus)
 - ✅ 前端基础架构 (Vue3 + Vite + Ant Design Vue)
 - ✅ 用户认证模块 (注册/登录/鉴权)
@@ -361,7 +361,7 @@ docker compose up -d --build  # ✅ 一键启动
 - ✅ 管理后台: http://localhost:8081/admin
 - ✅ API文档: http://localhost:8080/doc.html
 
-### 测试账号
+### 演示账号
 - ✅ 普通用户: 13800138000 / 123456
 - ✅ 管理员: admin / 123456
 
