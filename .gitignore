@@ -32,3 +32,5 @@ logs/
 
 # Database
 *.sql.backup
+
+.alkaid-sop
