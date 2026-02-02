@@ -1,0 +1,39 @@
+package com.movieticket.config;
+
+import io.swagger.v3.oas.models.OpenAPI;
+import io.swagger.v3.oas.models.info.Contact;
+import io.swagger.v3.oas.models.info.Info;
+import io.swagger.v3.oas.models.info.License;
+import io.swagger.v3.oas.models.security.SecurityRequirement;
+import io.swagger.v3.oas.models.security.SecurityScheme;
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
+
+/**
+ * Knife4j/OpenAPI 配置
+ */
+@Configuration
+public class Knife4jConfig {
+
+    @Bean
+    public OpenAPI openAPI() {
+        return new OpenAPI()
+                .info(new Info()
+                        .title("电影票预订系统 API")
+                        .description("电影票预订系统后端接口文档")
+                        .version("1.0.0")
+                        .contact(new Contact()
+                                .name("MovieTicket Team")
+                                .email("admin@movieticket.com"))
+                        .license(new License()
+                                .name("Apache 2.0")
+                                .url("https://www.apache.org/licenses/LICENSE-2.0")))
+                // 添加 Token 认证
+                .schemaRequirement("satoken", new SecurityScheme()
+                        .type(SecurityScheme.Type.APIKEY)
+                        .in(SecurityScheme.In.HEADER)
+                        .name("satoken")
+                        .description("在 Header 中携带 satoken"))
+                .addSecurityItem(new SecurityRequirement().addList("satoken"));
+    }
+}
