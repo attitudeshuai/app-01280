@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { ref, onMounted } from 'vue'
+import { ref, onMounted, watch } from 'vue'
 import { useRouter } from 'vue-router'
 import { movieApi, cinemaApi } from '@/api'
 import { useAppStore } from '@/stores/app'
@@ -20,22 +20,36 @@ const cinemas = ref<Cinema[]>([])
 const loading = ref(true)
 const activeTab = ref('showing')
 
+// 获取影院数据
+const fetchCinemas = async () => {
+  try {
+    const res = await cinemaApi.getList({ city: appStore.currentCity })
+    cinemas.value = res.data?.records || res.data || []
+  } catch (error) {
+    console.error('获取影院数据失败', error)
+  }
+}
+
 // 获取数据
 onMounted(async () => {
   try {
-    const [showingRes, comingRes, cinemaRes] = await Promise.all([
+    const [showingRes, comingRes] = await Promise.all([
       movieApi.getShowing({ size: 8 }),
-      movieApi.getComing({ size: 4 }),
-      cinemaApi.getList({ city: appStore.currentCity })
+      movieApi.getComing({ size: 4 })
     ])
     showingMovies.value = showingRes.data?.records || []
     comingMovies.value = comingRes.data?.records || []
-    cinemas.value = cinemaRes.data?.records || cinemaRes.data || []
+    await fetchCinemas()
   } catch (error) {
     console.error('获取数据失败', error)
   } finally {
     loading.value = false
   }
+})
+
+// 监听城市变化，重新获取影院列表
+watch(() => appStore.currentCity, () => {
+  fetchCinemas()
 })
 
 // 跳转到影片详情

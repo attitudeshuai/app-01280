@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { ref, onMounted } from 'vue'
+import { ref, onMounted, watch } from 'vue'
 import { useRouter } from 'vue-router'
 import { cinemaApi } from '@/api'
 import { useAppStore } from '@/stores/app'
@@ -30,6 +30,12 @@ const fetchCinemas = async () => {
 }
 
 onMounted(() => {
+  fetchCinemas()
+})
+
+// 监听城市变化，重新获取影院列表
+watch(() => appStore.currentCity, () => {
+  keyword.value = '' // 切换城市时清空搜索关键词
   fetchCinemas()
 })
 
