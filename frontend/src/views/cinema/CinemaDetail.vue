@@ -1,7 +1,8 @@
 <script setup lang="ts">
-import { ref, onMounted } from 'vue'
+import { ref, onMounted, watch } from 'vue'
 import { useRouter, useRoute } from 'vue-router'
 import { cinemaApi, showtimeApi } from '@/api'
+import { useAppStore } from '@/stores/app'
 import type { Cinema, Showtime } from '@/types'
 import {
   EnvironmentOutlined,
@@ -28,6 +29,12 @@ const weekDayMap: Record<number, string> = {
 
 const router = useRouter()
 const route = useRoute()
+const appStore = useAppStore()
+
+// 监听城市变化，返回影院列表页
+watch(() => appStore.currentCity, () => {
+  router.replace('/cinemas')
+})
 
 const cinemaId = Number(route.params.id)
 const loading = ref(true)
