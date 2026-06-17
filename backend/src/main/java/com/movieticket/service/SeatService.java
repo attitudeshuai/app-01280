@@ -92,12 +92,15 @@ public class SeatService {
     public void confirmSeatsSold(List<Long> seatIds) {
         LambdaUpdateWrapper<Seat> updateWrapper = new LambdaUpdateWrapper<>();
         updateWrapper.in(Seat::getId, seatIds)
-                .eq(Seat::getStatus, Seat.SeatStatusEnum.AVAILABLE)
+                .eq(Seat::getStatus, Seat.SeatStatusEnum.LOCKED)
                 .set(Seat::getStatus, Seat.SeatStatusEnum.SOLD)
                 .set(Seat::getLockedBy, null)
                 .set(Seat::getLockedUntil, null);
-        
-        seatMapper.update(null, updateWrapper);
+
+        int updated = seatMapper.update(null, updateWrapper);
+        if (updated != seatIds.size()) {
+            throw new BusinessException("座位状态异常，无法确认售出");
+        }
         log.info("座位确认售出: seatIds={}", seatIds);
     }
 }
