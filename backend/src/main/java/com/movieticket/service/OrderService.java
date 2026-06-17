@@ -84,7 +84,7 @@ public class OrderService {
         order.setTotalAmount(totalAmount);  // 先设置基础总价
         order.setCompanionType(request.getCompanionType());
         order.setStatus(Order.OrderStatusEnum.PENDING);
-        order.setExpireTime(LocalDateTime.now().plusMinutes(15));
+        order.setExpireTime(LocalDateTime.now().plusMinutes(1));
 
         orderMapper.insert(order);
 
