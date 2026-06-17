@@ -92,7 +92,7 @@ public class SeatService {
     public void confirmSeatsSold(List<Long> seatIds) {
         LambdaUpdateWrapper<Seat> updateWrapper = new LambdaUpdateWrapper<>();
         updateWrapper.in(Seat::getId, seatIds)
-                .eq(Seat::getStatus, Seat.SeatStatusEnum.AVAILABLE)
+                .eq(Seat::getStatus, Seat.SeatStatusEnum.LOCKED)
                 .set(Seat::getStatus, Seat.SeatStatusEnum.SOLD)
                 .set(Seat::getLockedBy, null)
                 .set(Seat::getLockedUntil, null);
